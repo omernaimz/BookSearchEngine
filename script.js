@@ -13,6 +13,7 @@ document.querySelector('#search-form').addEventListener('submit', function(event
     }).then(function(data) {
         loader.style.display = "none";
         var books = data.items;
+        console.log(books);
 
         //setting the books array length to be max 10 books as requested
         if (books.length > 10) {
@@ -25,6 +26,8 @@ document.querySelector('#search-form').addEventListener('submit', function(event
         });
 
         createBooks(books);
+    }).catch(function(error) {
+        console.log(error);
     });
 });
 
@@ -63,7 +66,7 @@ function createBookElement(book) {
                                             </td>
                                             <td>
                                                 <div class="r-no">
-                                                    <span>${bookInfo.description}</span>
+                                                    <span>${bookInfo.description ? bookInfo.description : 'No description given'}</span>
                                                 </div>
                                             </td>
                                         </tr>
