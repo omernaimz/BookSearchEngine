@@ -43,7 +43,7 @@ tr.inner-box {
 
 .r-no {
     max-width: 200px;
-    max-height: 50px;
+    max-height: 105px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
