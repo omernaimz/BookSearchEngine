@@ -46,6 +46,7 @@ tr.inner-box {
     max-height: 105px;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-bottom: 20px;
 }
 
 .r-no:hover {
